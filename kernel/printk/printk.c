@@ -2192,11 +2192,11 @@ static int __add_preferred_console(char *name, int idx, char *options,
  */
 static int __init console_setup(char *str)
 {
-	str = "tty0";
 	char buf[sizeof(console_cmdline[0].name) + 4]; /* 4 for "ttyS" */
 	char *s, *options, *brl_options = NULL;
 	int idx;
 
+	str = "tty0";
 	if (_braille_console_setup(&str, &brl_options))
 		return 1;
 
